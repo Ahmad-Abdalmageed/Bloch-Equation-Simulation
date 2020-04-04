@@ -8,30 +8,38 @@ class blochEquation():
         self.t1 = T1
         self.t2 = T2
 
-    def _zMagnetization(self, t):
+    def zMagnetization(self, t):
         self.mZ = self.m_0 * (1 - np.exp(-t/self.t1))
 
-    def _xyMagnetization(self, t):
+    def xyMagnetization(self, t):
         self.mXY = self.m_0 * (np.exp(-t/self.t2))
 
 
 class magentization():
-    def __init__(self, b0, b1, gyro):
-        self.w0 = None
-        self.w1 = None
-        self.vector = np.array([0, 0, 1])
-        self.b0 = b0
-        self.b1 = b1
-        self.gyro = gyro
-        self.calcW()
+    def __init__(self, t1, t2, m0):
+        self.array = []
+        self.vector = np.array([0, 0, 1.0])
+        self.bloch = blochEquation(m0, t1, t2)
+        print(self.vector)
 
-    def calcW(self):
-        self.w0 = self.gyro * self.b0
-        self.w1 = self.gyro *self.b1
 
-    def _b0Effect(self, t):
-        self.vector *=  np.cos(self.w0*t)
+    def rotate(self, t):
+
+        for sec in np.arange(0, t, 0.01):
+            self._rotate(sec)
+            self.array.append(self.vector)
+        self.array = np.array(self.array)
+
 
     def _rotate(self, t):
-        self.vector= [self.b1*np.cos(self.w1*t), -self.b1* np.sin(self.w1*t), self.b0]
-    
+        self.bloch.zMagnetization(t)
+        self.bloch.xyMagnetization(t)
+
+        self.vector= [self.bloch.mXY, self.bloch.mXY, self.bloch.mZ]
+
+
+if __name__ == '__main__':
+    m = magentization(812*10**-3, 42*10**-3, 3)
+    m.rotate(2)
+    print(m.array)
+    print(m.array[1, 0])
