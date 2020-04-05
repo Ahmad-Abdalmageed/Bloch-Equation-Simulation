@@ -180,7 +180,7 @@ plt.axis("off")
 plt.imshow(imageSlice.imageData)
 ```
 
-![1](images/1.png)
+![](images/1.png)
 
 ### the following are a plots if the image\`s Fourier transform magnitude and phase components 
 
