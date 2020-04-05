@@ -158,16 +158,19 @@ print(imageSlice.loadImage.__doc__)
     
             Implements the following:
             * Loading the image from specified path
-            * Normalize the image values 				        =============================================================================
+            * Normalize the image values
+            ================== =============================================================================
             **Parameters**
-            Path               a string specifying the absolute path to image, if provided loads 							this image
+            Path               a string specifying the absolute path to image, if provided loads this image
                                to the class`s data
             data               numpy array if provided loads this data directly
             fourier            numpy array if provided loads the transformed data
-            imageShape         a tuple of ints identifying the image shape if any method is used 							except using
+            imageShape         a tuple of ints identifying the image shape if any method is used except using
                                path
-            greyScale          if True the image is transformed to greyscale via OpenCV`s convert 							 image tool
-            =============================================================================
+            greyScale          if True the image is transformed to greyscale via OpenCV`s convert image tool
+            ================== =============================================================================
+            
+    
 
 
 
@@ -223,32 +226,34 @@ print(imageSlice.phase.__doc__)
     imageSlice.fourierTransform: 
     
             Applies Fourier Transform on the data of the image and save it in the specified attribute
-    		===========================================================================
+            ================== ===========================================================================
             **Parameters**
             shifted            If True will also apply the shifted Fourier Transform
-    		===========================================================================
+            ================== ===========================================================================
             
     imageSlice.magnitude:
     
             Extracts the image`s Magnitude Spectrum from the image`s Fourier data
-    		===========================================================================
+            ================== ===========================================================================
             **Parameters**
             LodScale           If True returns 20 * np.log(ImageFourier)
-    		===========================================================================
+            ================== ===========================================================================
             **Returns**
             array              a numpy array of the extracted data
-    		===========================================================================
+            ================== ===========================================================================
             
     imageSlice.phase: 
     
             Extracts the image`s Phase Spectrum from the image`s Fourier data
-    		===========================================================================
+            ================== ===========================================================================
             **Parameters**
             shifted           If true applies a phase shift on the returned data
-    		===========================================================================
+            ================== ===========================================================================
             **Returns**
             array              a numpy array of the extracted data
-    		===========================================================================
+            ================== ===========================================================================
+            
+    
 
 
 
