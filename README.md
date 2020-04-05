@@ -170,11 +170,6 @@ print(imageSlice.loadImage.__doc__)
             greyScale          if True the image is transformed to greyscale via OpenCV`s convert image tool
             ================== =============================================================================
 
-
-​    
-
-
-
 ##### Showing the image loaded 
 
 
@@ -185,7 +180,7 @@ plt.axis("off")
 plt.imshow(imageSlice.imageData)
 ```
 
-![1](images\1.png)
+![1](images/1.png)
 
 ### the following are a plots if the image\`s Fourier transform magnitude and phase components 
 
@@ -198,7 +193,7 @@ plt.axis("off")
 plt.imshow(imageSlice.magnitude())
 ```
 
-![2](images\2.png)
+![2](images/2.png)
 
 
 
@@ -210,7 +205,7 @@ plt.axis("off")
 plt.imshow(imageSlice.phase())
 ```
 
-![3](images\3.png)
+![3](images/3.png)
 
 
 ```python
@@ -285,5 +280,5 @@ plt.scatter(range(0, 10), Bz, label="Different Measured points")
 plt.legend()
 ```
 
-![field](images\6.png)
+![field](images/6.png)
 
