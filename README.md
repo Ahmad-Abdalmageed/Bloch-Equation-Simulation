@@ -110,7 +110,11 @@ plt.show()
 
 ### the Animation
 
-![](images\magnetization.gif)
+
+
+​	![](magnetization.gif)
+
+
 
 ### Third Part 
 
