@@ -108,7 +108,7 @@ plt.show()
 
 ##### Note : the animation is interactive on Jupyter
 
-### the Animation
+### the [Animation](magnetization.gif)
 
 
 
@@ -120,7 +120,7 @@ plt.show()
 
 #### Applying Fourier Transform on an image 
 
-###### importing a class made for the image's loading and performing Fourier transform 
+###### importing a class made for the [image's](image.py) loading and performing Fourier transform 
 
 
 ```python
