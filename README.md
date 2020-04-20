@@ -372,4 +372,7 @@ ani.save("magnetization2.gif")
 plt.show()
 ```
 
-![](images/bulk2.png)
+
+
+![](magnetization2.gif)
+
