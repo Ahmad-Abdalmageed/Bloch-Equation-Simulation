@@ -376,3 +376,4 @@ plt.show()
 
 ![](magnetization2.gif)
 
+### Different colors are used for different trajectories, visualizing different trajectories for 5 different points 
