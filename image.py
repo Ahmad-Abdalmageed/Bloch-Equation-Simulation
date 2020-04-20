@@ -67,7 +67,7 @@ class image():
                 self.imageData = cv.imread(path)
                 self.imageData = cv.cvtColor(self.imageData, cv.COLOR_BGR2RGB)
                 if greyScale : self.imageData = cv.cvtColor(self.imageData, cv.COLOR_RGB2GRAY)
-                self.imageData = self.imageData/ 255.0
+                # self.imageData = self.imageData/ 255.0
                 self.dataType = self.imageData.dtype
                 self.imageShape = self.imageData.shape
                 print("the image loaded shape is ", self.imageShape)
